@@ -1,0 +1,114 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #4c1e10; /* Rich brown background for a warm, earthy tone */
+    padding: 20px 2rem; /* Spacious padding for breathing room */
+    display: flex;
+    justify-content: center; /* Center the nav content horizontally */
+    align-items: center; /* Vertically center the navbar content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for elegance */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #d7ccc8; /* Light beige border to separate from content */
+    transition: all 0.3s ease; /* Smooth transition for hover and scroll effects */
+}
+
+/* Navigation List */
+.navList {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Increased gap for better spacing */
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center the items horizontally within the navbar */
+}
+
+/* Navbar Link Styles */
+.navLink {
+    color: #f5f5f5; /* Light text for contrast */
+    text-decoration: none;
+    font-size: 1.1rem; /* Balanced font size */
+    font-weight: 500; /* Semi-bold text for emphasis */
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.navLink:hover {
+    color: #d7ccc8; /* Beige on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    letter-spacing: 2px; /* Subtle letter-spacing on hover */
+}
+
+.navLink:active {
+    color: #bc8a5b; /* Lighter brownish color when clicked */
+    transform: translateY(1px); /* Active click effect */
+    letter-spacing: 1px; /* Reset letter-spacing on active click */
+}
+
+/* Add a bottom border on hover to nav items */
+.navList li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #bc8a5b; /* Lighter brown for the hover effect */
+    transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+/* Styling for the unordered list in the navbar */
+.navbarList {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Align the list items horizontally */
+    gap: 20px; /* Space between the items */
+    justify-content: center; /* Center the list items */
+}
+
+/* Styling for each list item inside the unordered list */
+.navbarList li {
+    font-size: 1.2rem; /* Set the font size */
+    font-weight: 500; /* Semi-bold text for emphasis */
+    color: #c68e17; /* Caramel color for the text */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effect */
+}
+
+/* Hover effect on unordered list items */
+.navbarList li:hover {
+    color: #d49a34; /* Lighter caramel color when hovering */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Optional: Style for active state on unordered list items */
+.navbarList li:active {
+    color: #b97e2e; /* Darker caramel when clicked */
+    transform: translateY(1px); /* Slight press effect when clicked */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 1rem; /* Reduced padding for smaller screens */
+    }
+
+    .navList {
+        flex-direction: column; /* Stack the nav items vertically */
+        gap: 20px; /* Increased gap for better spacing */
+        text-align: center;
+    }
+
+    .navList li a {
+        font-size: 1.4rem; /* Slightly larger font for readability */
+    }
+
+    /* Stack the navbarList items vertically on smaller screens */
+    .navbarList {
+        flex-direction: column; /* Stack the items vertically on smaller screens */
+        gap: 10px; /* Adjust the gap */
+    }
+}
